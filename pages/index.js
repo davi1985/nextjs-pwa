@@ -19,10 +19,16 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="input">
-          <input type="text" placeholder="Input type text" />
+        <div className={styles.inputContainer}>
+          <input
+            className={styles.input}
+            type="text"
+            placeholder="Input type text"
+          />
 
-          <input type="number" placeholder="12.99" />
+          <input className={styles.input} type="number" placeholder="12.99" />
+
+          <input className={styles.input} type="date" placeholder="12.99" />
         </div>
       </main>
 

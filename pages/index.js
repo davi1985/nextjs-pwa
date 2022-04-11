@@ -18,6 +18,12 @@ export default function Home() {
             <a>Contact</a>
           </Link>
         </div>
+
+        <div className="input">
+          <input type="text" placeholder="Input type text" />
+
+          <input type="number" placeholder="12.99" />
+        </div>
       </main>
 
       <footer className={styles.footer}>

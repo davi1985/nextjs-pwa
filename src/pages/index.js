@@ -1,9 +1,12 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { useDevice } from "../hooks/useDevice";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
+  const { device } = useDevice();
+
   return (
     <div className={styles.container}>
       <main className={styles.main}>
@@ -26,9 +29,17 @@ export default function Home() {
             placeholder="Input type text"
           />
 
-          <input className={styles.input} type="number" placeholder="12.99" />
+          <input
+            className={styles.input}
+            type={device === "mobile" && "number"}
+            placeholder="12.99"
+          />
 
-          <input className={styles.input} type="date" placeholder="12.99" />
+          <input
+            className={styles.input}
+            type={device === "mobile" ? "date" : "text"}
+            placeholder="12.99"
+          />
         </div>
       </main>
 
